@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de projetos sociais, voluntariado e doações.">
+    <meta name="keywords" content="projetos sociais, voluntariado, doações">
+    <title>ONG - Projetos Sociais</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos simples para os links clicáveis */
+        .link-clicavel {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .link-clicavel:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+        <h1>Projetos Sociais</h1>
+        <div id="usuario-logado"></div> <!-- Exibe nome do usuário -->
+    </header>
+    <main>
+        <section>
+            <h2>Gestão de Projetos</h2>
+            <p>Cadastro detalhado de projetos com indicadores de impacto.</p>
+            <a href="https://drive.google.com/file/d/1NdLnwnd3itFHDa7Bs3k7pcHwHYT4-gqD/view?usp=sharing" class="link-clicavel">Saiba Mais Sobre Projetos</a>
+        </section>
+        <section>
+            <h2>Galeria de Fotos e Vídeos</h2>
+            <p>Veja nossas atividades em ação.</p>
+            <a href="https://drive.google.com/drive/folders/14538r7tMMpdIHbKzHE5ILE9GETIZNbrW?usp=drive_link" target="_blank" class="link-clicavel">Ver Galeria</a>
+        </section>
+        <section>
+            <h2>Voluntariado</h2>
+            <p>Descubra oportunidades e cadastre-se.</p>
+            <a href="cadastro.html" class="link-clicavel">Cadastre-se como Voluntário</a>
+        </section>
+        <section>
+            <h2>Doações</h2>
+            <p>Realize doações on-line e acompanhe o impacto.</p>
+            <a href="https://acaochego.org/QueroAjudar" target="_blank" class="link-clicavel">Fazer Doação</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Nome da ONG. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        // Recupera e exibe nome do usuário
+        const nomeUsuario = localStorage.getItem('nomeUsuario');
+        if (nomeUsuario) {
+            document.getElementById('usuario-logado').innerHTML = `<p>Olá, ${nomeUsuario}! Explore nossos projetos.</p>`;
+        } else {
+            document.getElementById('usuario-logado').innerHTML = `<p>Faça login para acessar mais.</p>`;
+        }
+    </script>
+</body>
+</html>
